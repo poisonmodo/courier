@@ -144,7 +144,7 @@ class UserController extends Controller
         if($validator->fails()){
             return response()->json([
                 "statuscode" => 422,
-                "message" => $validator->errors()
+                "message" => $validator->errors()->first()
             ],422);
         }
         
