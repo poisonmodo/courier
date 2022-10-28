@@ -15,7 +15,6 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 -- Dumping structure for table courier.cities
-DROP TABLE IF EXISTS `cities`;
 CREATE TABLE IF NOT EXISTS `cities` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `province_id` int(11) NOT NULL DEFAULT 0,
@@ -502,7 +501,6 @@ INSERT INTO `cities` (`id`, `province_id`, `city`) VALUES
 	(475, 34, 'TELUK BINTUNI');
 
 -- Dumping structure for table courier.failed_jobs
-DROP TABLE IF EXISTS `failed_jobs`;
 CREATE TABLE IF NOT EXISTS `failed_jobs` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -518,7 +516,6 @@ CREATE TABLE IF NOT EXISTS `failed_jobs` (
 -- Dumping data for table courier.failed_jobs: ~0 rows (approximately)
 
 -- Dumping structure for table courier.migrations
-DROP TABLE IF EXISTS `migrations`;
 CREATE TABLE IF NOT EXISTS `migrations` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -540,7 +537,6 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 	(10, '2022_10_28_104553_cities', 2);
 
 -- Dumping structure for table courier.oauth_access_tokens
-DROP TABLE IF EXISTS `oauth_access_tokens`;
 CREATE TABLE IF NOT EXISTS `oauth_access_tokens` (
   `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_id` bigint(20) unsigned DEFAULT NULL,
@@ -558,7 +554,6 @@ CREATE TABLE IF NOT EXISTS `oauth_access_tokens` (
 -- Dumping data for table courier.oauth_access_tokens: ~0 rows (approximately)
 
 -- Dumping structure for table courier.oauth_auth_codes
-DROP TABLE IF EXISTS `oauth_auth_codes`;
 CREATE TABLE IF NOT EXISTS `oauth_auth_codes` (
   `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_id` bigint(20) unsigned NOT NULL,
@@ -573,7 +568,6 @@ CREATE TABLE IF NOT EXISTS `oauth_auth_codes` (
 -- Dumping data for table courier.oauth_auth_codes: ~0 rows (approximately)
 
 -- Dumping structure for table courier.oauth_clients
-DROP TABLE IF EXISTS `oauth_clients`;
 CREATE TABLE IF NOT EXISTS `oauth_clients` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) unsigned DEFAULT NULL,
@@ -596,7 +590,6 @@ INSERT INTO `oauth_clients` (`id`, `user_id`, `name`, `secret`, `provider`, `red
 	(2, NULL, 'Laravel Password Grant Client', 'QOfU5unLGtVdkZu1SnscBjgdvST4wdW2GCLBY4KO', 'users', 'http://localhost', 0, 1, 0, '2022-10-27 02:37:34', '2022-10-27 02:37:34');
 
 -- Dumping structure for table courier.oauth_personal_access_clients
-DROP TABLE IF EXISTS `oauth_personal_access_clients`;
 CREATE TABLE IF NOT EXISTS `oauth_personal_access_clients` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `client_id` bigint(20) unsigned NOT NULL,
@@ -610,7 +603,6 @@ INSERT INTO `oauth_personal_access_clients` (`id`, `client_id`, `created_at`, `u
 	(1, 1, '2022-10-27 02:37:34', '2022-10-27 02:37:34');
 
 -- Dumping structure for table courier.oauth_refresh_tokens
-DROP TABLE IF EXISTS `oauth_refresh_tokens`;
 CREATE TABLE IF NOT EXISTS `oauth_refresh_tokens` (
   `id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `access_token_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -623,7 +615,6 @@ CREATE TABLE IF NOT EXISTS `oauth_refresh_tokens` (
 -- Dumping data for table courier.oauth_refresh_tokens: ~0 rows (approximately)
 
 -- Dumping structure for table courier.password_resets
-DROP TABLE IF EXISTS `password_resets`;
 CREATE TABLE IF NOT EXISTS `password_resets` (
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -634,7 +625,6 @@ CREATE TABLE IF NOT EXISTS `password_resets` (
 -- Dumping data for table courier.password_resets: ~0 rows (approximately)
 
 -- Dumping structure for table courier.personal_access_tokens
-DROP TABLE IF EXISTS `personal_access_tokens`;
 CREATE TABLE IF NOT EXISTS `personal_access_tokens` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `tokenable_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -662,7 +652,6 @@ INSERT INTO `personal_access_tokens` (`id`, `tokenable_type`, `tokenable_id`, `n
 	(8, 'App\\Models\\User', 1, 'Laravel Password Grant Client', 'ff3f3601133dc568de29f14bdafd9064d533421068f78a35e350c5328808e753', '["*"]', NULL, '2022-10-28 06:17:44', '2022-10-28 06:17:44');
 
 -- Dumping structure for table courier.users
-DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
